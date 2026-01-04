@@ -15,7 +15,7 @@ mute="$(pamixer --get-mute)"
 vol="$(pamixer --get-volume)"
 
 if [[ $mute == "true" ]]; then
-	printf "🔇" && exit
+	printf "🔇     " && exit
 fi
 
 case $vol in

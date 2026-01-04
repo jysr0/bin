@@ -2,7 +2,7 @@
 
 # try $BLOCK_BUTTON and $BUTTON
 case $BLOCK_BUTTON in
-	1) brightnessctl -q s 1%;;
+	1) brightnessctl -q s 10;;
 	3) brightnessctl -q s 100%;;
 	4) brightnessctl -q -e2 -n10 s 5%-;;
 	5) brightnessctl -q -e2 s 5%+;;
