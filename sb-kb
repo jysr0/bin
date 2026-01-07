@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# don't use this script if dwm is patched with pwkl. 
+
 # Thanks to nonpop.
 # clone and compile and set in $PATH (watch for mode bits) the `xkblayout-state` from: https://github.com/nonpop/xkblayout-state.
 
