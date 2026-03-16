@@ -26,12 +26,13 @@ enpstat="$(cat /sys/class/net/[Ee]*/operstate)"
 
 if [[ "$enpstat" == "up" ]]; then
 	ssid="$(nmcli -f active,ssid device wifi | grep -i '^yes' | cut -c 4- | sed 's/^[[:space:]]*//; s/[[:space:]]*$//')"
-	signal="$(($(nmcli -f active,signal device wifi | grep -i '^yes' | cut -c 4- | tr -d '[:space:]')))"
-	printf "󰀂 $signal%% $ssid"
+	#signal="$(($(nmcli -f active,signal device wifi | grep -i '^yes' | cut -c 4- | tr -d '[:space:]')))"
+	printf "󰀂 $ssid"
+	#printf "󰀂 $signal%% $ssid"
 fi
 
 if [[ "$wlpstat" == "up" ]]; then
 	ssid="$(nmcli -f active,ssid device wifi | grep -i '^yes' | cut -c 4- | sed 's/^[[:space:]]*//; s/[[:space:]]*$//')"
-	signal="$(($(nmcli -f active,signal device wifi | grep -i '^yes' | cut -c 4- | tr -d '[:space:]')))"
-	printf " $signal%% $ssid"
+	#signal="$(($(nmcli -f active,signal device wifi | grep -i '^yes' | cut -c 4- | tr -d '[:space:]')))"
+	printf " $ssid"
 fi
